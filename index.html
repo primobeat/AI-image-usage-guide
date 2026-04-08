@@ -914,6 +914,7 @@
       padding: 32px;
       margin-bottom: 16px;
       animation: itreeFadeIn 0.35s ease;
+      isolation: isolate;
     }
     @keyframes itreeFadeIn {
       from { opacity: 0; transform: translateY(16px); }
@@ -975,14 +976,20 @@
       height: 10px;
       border-radius: 50%;
       flex-shrink: 0;
+      isolation: isolate;
+      -webkit-filter: none;
+      filter: none;
+      box-shadow: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
     }
-    .ib-green { background: var(--green); }
-    .ib-yellow { background: var(--yellow); }
-    .ib-red { background: var(--red); }
-    .ib-neutral { background: var(--text-muted); }
-    .ib-accent { background: var(--accent-light); }
-    .ib-dim { background: rgba(162, 155, 254, 0.45); }
-    .ib-muted { background: var(--text-muted); }
+    .ib-green { background-color: var(--green); }
+    .ib-yellow { background-color: var(--yellow); }
+    .ib-red { background-color: var(--red); }
+    .ib-neutral { background-color: var(--text-muted); }
+    .ib-accent { background-color: var(--accent-light); }
+    .ib-dim { background-color: rgba(162, 155, 254, 0.45); }
+    .ib-muted { background-color: var(--text-muted); }
     .itree-btn .ib-text { flex: 1; }
     .itree-btn .ib-badge {
       font-size: 11px;
@@ -1178,12 +1185,15 @@
       width: 4px;
       height: 4px;
       border-radius: 50%;
-      background: var(--text-dim);
+      background-color: var(--text-dim);
       opacity: 0.3;
+      isolation: isolate;
+      filter: none;
+      box-shadow: none;
     }
-    .ra-item.ra-positive::before { background: var(--green); opacity: 0.6; }
-    .ra-item.ra-warn::before     { background: var(--yellow); opacity: 0.6; }
-    .ra-item.ra-danger::before   { background: var(--red); opacity: 0.6; }
+    .ra-item.ra-positive::before { background-color: var(--green); opacity: 0.6; }
+    .ra-item.ra-warn::before     { background-color: var(--yellow); opacity: 0.6; }
+    .ra-item.ra-danger::before   { background-color: var(--red); opacity: 0.6; }
 
     /* ── 리셋 버튼 ── */
     .itree-restart {
